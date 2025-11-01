@@ -6,7 +6,7 @@
   @csrf
   <div class="mb-3"><label>Aula</label>
     <select name="aula_id" class="form-control" required>
-      @foreach(\App\Models\Aula::all() as \$a)<option value="{{ \$a->id }}">{{ \$a->titulo }}</option>@endforeach
+      @foreach(\App\Models\Aula::all() as $a)<option value="{{ $a->id }}">{{ $a->titulo }}</option>@endforeach
     </select>
   </div>
   <div class="mb-3"><label>ID do Aluno (use id existente se tiver)</label><input name="aluno_id" class="form-control" type="number"></div>
